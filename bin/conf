@@ -2,4 +2,4 @@ contents="bashcms2_contents"
 contents_owner="kasajimakengo"
 wwwdir="/var/www"
 contentsdir="$wwwdir/$contents"
-appdir="wwwdir/bashcms2" #bashcms2をインストールするパス
+appdir="$wwwdir/bashcms2" #bashcms2をインストールするパス
