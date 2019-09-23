@@ -15,7 +15,7 @@ md="$contentsdir/$dir/main.md"
 
 ### MAKE MATADATA ###
 counter="$datadir/counters/$(tr '/' '_' <<< $dir)"
-echo -n 1 >> "$counter"
+echo -n 1 >> "$counter" # increment the counter
 
 cat << FIN > $tmp-meta.yaml
 ---
@@ -31,4 +31,3 @@ FIN
 pandoc --template="$viewdir/template.html"	\
     -f markdown_github+yaml_metadata_block "$md" "$tmp-meta.yaml"  |
 sed -r "/:\/\/|=\"\//!s;<(img src|a href)=\";&/$dir/;"
-
