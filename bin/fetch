@@ -3,7 +3,7 @@ source "$(dirname $0)/conf"
 exec 2> "$logdir/$(basename $0).$(date +%Y%m%d_%H%M%S).$$"
 tmp=/tmp/$$
 
-echo 'Content-type: text/html'
+echo -e 'Content-type: text/html\n\n'
 
 cd "$contentsdir"
 git fetch origin master
