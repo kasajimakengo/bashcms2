@@ -117,22 +117,23 @@ Content-type: text/html
         <a data-pocket-label="pocket" data-pocket-count="horizontal" class="pocket-btn" data-lang="en"></a>
         <script type="text/javascript">!function(d,i){if(!d.getElementById(i)){var j=d.createElement("script");j.id=i;j.src="https://widgets.getpocket.com/v1/j/btn.js?v=1";var w=d.getElementById(i);d.body.appendChild(j);}}(document,"pocket-btn-js");</script>
         $endif$
-        $body$
        <div class="card" id="article-info"> 
         <h4 class="card-header">Article Info</h4>
-        <p style="padding:5px">created: $created_time$<br />
-          modified: $modified_time$<br />
-          views: $views$<br />
+        <p style="padding:5px">作成日: $created_time$<br />
+          更新日: $modified_time$<br />
+          ビュー数: $views$<br />
           keywords: <span id="keywords">$Keywords$</span></br>
           $nav$
         </p>
-       </div>
+        </div>
+        $body$
       </div>
       <div class="col-md-4" id="widgets">
         $for(sociallinks)$
         <a href="$sociallinks.href$"><i class="fa $sociallinks.icon$ fa-3x"></i>
         </a>
         $endfor$
+        <br />
         <aside id="last-articles"></aside>
         <br />
         <aside id="rank-articles"></aside>
@@ -145,9 +146,9 @@ Content-type: text/html
 
 </main>
 
-<footer class="container">
+<!-- <footer class="container">
   <p>&copy; Company 2020</p>
-</footer>
+</footer> -->
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <script src="/bsview/main.js"></script>
